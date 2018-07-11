@@ -6,7 +6,7 @@ import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import AddTrip from './components/AddTrip';
-import Trip from '.components/Trip';
+import Trip from './components/Trip';
 
 import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
 
