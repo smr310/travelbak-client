@@ -5,14 +5,23 @@ import NavBar from './components/NavBar';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 
+import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <LandingPage />
-        <Login />
-      </div>
+      <Router>
+        <div className="app">
+          <nav>
+            <NavBar />
+          </nav>
+          <main>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/Login" component={Login} />
+          </main>
+        </div>
+      </Router>
+      
     );
   }
 }
