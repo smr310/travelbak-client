@@ -6,6 +6,7 @@ import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import AddTrip from './components/AddTrip';
+import Trip from '.components/Trip';
 
 import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Dashboard" component={Dashboard} />
             <Route exact path="/AddTrip" component={AddTrip} />
+            <Route exact path="/Trip" component={Trip} />
           </main>
         </div>
       </Router>
