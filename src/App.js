@@ -4,7 +4,8 @@ import './App.css';
 import NavBar from './components/NavBar';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard';
+import AddTrip from './components/AddTrip';
 
 import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
 
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Dashboard" component={Dashboard} />
+            <Route exact path="/AddTrip" component={AddTrip} />
           </main>
         </div>
       </Router>
