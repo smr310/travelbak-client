@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function NavBar() {
     const text = 'Example text';
     return (
