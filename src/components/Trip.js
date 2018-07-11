@@ -1,7 +1,7 @@
 import React from 'react';
 import './Trip.css';
 
-export default function PastTrips() {
+export default function Trip() {
     return (
         <div className="main-div">
             <div className="main-div">
