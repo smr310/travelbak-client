@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import './PastTrips.css';
 
 class PastTrips extends Component {
+    
     renderList() {
         return this.props.trips.map((trip) => {
             <li key={trip.title}>{trip.title}</li>
@@ -21,7 +22,9 @@ class PastTrips extends Component {
 
 function mapStateToProps(state) {
     return {
-        trips: state.trips
+        trips: state.tripsReducer.trips,
+        activeTrip: state.tripsReducer.activeTrip
+        
     };
 }
 

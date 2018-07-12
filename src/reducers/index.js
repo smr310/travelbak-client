@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
-import TripsReducer from './reducer_trips';
+import tripsReducer from './reducer_trips';
+import journalEntryReducer from './reducer_journalEntry';
 
 
 const rootReducer = combineReducers({
-    trips: TripsReducer
+    tripsReducer,
+    journalEntryReducer
 });
 
 export default rootReducer;
