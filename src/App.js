@@ -7,7 +7,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import AddTrip from './components/AddTrip';
 import Trip from './components/Trip';
-import JournalEntry from './components/JournalEntry'
+import JournalEntry from './components/JournalEntry';
 
 import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
 
