@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
-import PastTrips from './PastTrips';
+import PastTrips from '../containers/PastTrips';
 
 export default function Dashboard() {
     return (
