@@ -7,6 +7,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import AddTrip from './components/AddTrip';
 import Trip from './components/Trip';
+import JournalEntry from './components/JournalEntry'
 
 import { BrowserRouter as Router, Route, Link, } from 'react-router-dom'
 
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/Dashboard" component={Dashboard} />
             <Route exact path="/AddTrip" component={AddTrip} />
             <Route exact path="/Trip" component={Trip} />
+            <Route exact path="/JournalEntry" component={JournalEntry} />
           </main>
         </div>
       </Router>
