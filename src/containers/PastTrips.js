@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import './PastTrips.css';
 
-export default class PastTrips extends Component {
+class PastTrips extends Component {
     renderList() {
         return this.props.trips.map((trip) => {
             <li key={trip.title}>{trip.title}</li>
@@ -17,13 +19,10 @@ export default class PastTrips extends Component {
     }
 }
 
-export default function PastTrips() {
-    return (
-        <div className="main-div">
-            <h3>Past Trips</h3>
-            <div className="trip">TripA</div>
-            <div className="trip">TripB</div>
-            <div className="trip">TripC</div>
-        </div>
-    );
-};
+function mapStateToProps(state) {
+    return {
+        trips: state.trips
+    };
+}
+
+export default connect(mapStateToProps)(PastTrips)
