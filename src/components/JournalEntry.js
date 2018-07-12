@@ -1,7 +1,7 @@
 import React from 'react';
 import './JournalEntry.css';
 
-export default function Trip() {
+export default function JournalEntry() {
     return (
         <div className="main-div">
             <form>
