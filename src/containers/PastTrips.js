@@ -7,7 +7,9 @@ class PastTrips extends Component {
     
     renderList() {
         return this.props.trips.map((trip) => {
+            return (
             <li key={trip.title}>{trip.title}</li>
+            )
         })
     }
     
@@ -21,6 +23,7 @@ class PastTrips extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state);
     return {
         trips: state.tripsReducer.trips,
         activeTrip: state.tripsReducer.activeTrip
