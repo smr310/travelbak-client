@@ -1,12 +1,13 @@
 import React from 'react';
 import './Dashboard.css';
 import PastTrips from '../containers/PastTrips';
+import Trip from '../containers/Trip'
 
-export default function Dashboard() {
+export default function Dashboard(props) {
     return (
         <div className="main-div">
-            <button>Add New Trip</button>
-            <PastTrips />
+            <button onClick = {() => props.history.push('/AddTrip')}>Add New Trip</button>
+            <PastTrips history={props.history}/>
         </div>
     );
 };

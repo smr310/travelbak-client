@@ -6,14 +6,16 @@ import LandingPage from './landing-page';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import AddTrip from './AddTrip';
-import Trip from './Trip';
-import JournalEntry from './JournalEntry';
+import Trip from '../containers/Trip';
+import AddJournalEntry from './AddJournalEntry';
+import EditTrip from './EditTrip';
 import { connect } from 'react-redux';
 import { refreshAuthToken } from '../actions/auth';
 
 import { Route, withRouter, Link, } from 'react-router-dom'
 import { RegistrationPage } from './registration-page';
 import HeaderBar from './header-bar';
+import EditJournalEntry from './EditJournalEntry'
 
 class App extends Component {
   componentDidUpdate(prevProps) {
@@ -58,7 +60,9 @@ class App extends Component {
             <Route exact path="/Dashboard" component={Dashboard} />
             <Route exact path="/AddTrip" component={AddTrip} />
             <Route exact path="/Trip" component={Trip} />
-            <Route exact path="/JournalEntry" component={JournalEntry} />
+            <Route exact path="/EditTrip" component={EditTrip} />
+            <Route exact path="/AddJournalEntry" component={AddJournalEntry} />
+            <Route exact path="/EditJournalEntry" component={EditJournalEntry} />
           </main>
         </div>
     );

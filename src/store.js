@@ -7,6 +7,7 @@ import tripsReducer from './reducers/reducer_trips';
 import journalEntryReducer from './reducers/reducer_journalEntry';
 import protectedDataReducer from './reducers/protected-data';
 import { setAuthToken, refreshAuthToken } from './actions/auth';
+import activeTripReducer from './reducers/reducer_activeTrip'
 
 const store = createStore(
     combineReducers({
@@ -14,8 +15,11 @@ const store = createStore(
         auth: authReducer,
         protectedData: protectedDataReducer,
         tripsReducer,
+        activeTripReducer,
         journalEntryReducer
+        
     }),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(thunk)
 );
 

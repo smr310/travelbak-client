@@ -1,3 +1,13 @@
+
+*{
+    padding: 0px;
+}
+
+.journal-list-item {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+
 .main-div {
     text-align: center;
     margin-top: 140px;

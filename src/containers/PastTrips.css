@@ -1,6 +1,25 @@
+.container {
+    border: 1px solid black;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 0px;
+}
+
 .main-div {
     text-align: center;
     margin-top: 60px;
+    margin: auto;
+  
+}
+
+.list-item-trip {
+    width: 400px;
+    border: 1px solid black;
+    padding: 10px;
+    list-style-type: none;
+    margin: auto;
 }
 
 .trip {

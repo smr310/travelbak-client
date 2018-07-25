@@ -23,7 +23,7 @@ export class HeaderBar extends React.Component {
            
         return (
             <div className="header-bar">
-                <h1>travelBak</h1>
+                <h1 onClick={() => this.props.history.push('/')}>travelBak</h1>
                 {logOutButton}
             </div>
         );
