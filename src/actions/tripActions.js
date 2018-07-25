@@ -67,8 +67,8 @@ export const editTrip = (trip) => dispatch => {
         })
     })
         .then(res => res.json())
-        .then(response => {
-            console.log('this is response', response)
+        .then(trip => {
+            dispatch(selectTrip(trip))
         })
 }
 
@@ -83,10 +83,8 @@ export const editJournalEntry = (journalEntry) => dispatch => {
         body: JSON.stringify({journalEntry})
     })
         .then(res => res.json())
-        .then(updatedJournalEntry => {
-            console.log('this is the response:', updatedJournalEntry);
-            
-            dispatch(journalEntrySelected(updatedJournalEntry))
+        .then(trip => {
+            dispatch(selectTrip(trip))
         })
         .catch(error => console.log(error))
 }
@@ -148,7 +146,6 @@ export const deleteJournalEntry = (journalEntryId, selectedTrip) => dispatch => 
     })
     .then(res => res.json())
     .then(trip => {
-        console.log('this is the response', trip)
         dispatch(selectTrip(trip)) 
     })
     .catch(error => console.log(error))

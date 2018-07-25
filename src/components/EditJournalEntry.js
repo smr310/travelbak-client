@@ -1,7 +1,7 @@
 import React from 'react';
 import './AddJournalEntry.css';
 import { connect } from 'react-redux'
-import { editJournalEntry } from '../actions/tripActions'
+import { editJournalEntry, selectTrip } from '../actions/tripActions'
 
 class EditJournalEntry extends React.Component {
 
@@ -44,6 +44,7 @@ class EditJournalEntry extends React.Component {
         }
 
         this.props.dispatch(editJournalEntry(journalEntry));
+        this.props.dispatch(selectTrip(this.props.trip));
         this.props.history.push('/trip')
     }
 
