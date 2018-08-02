@@ -5,10 +5,9 @@
 
 .journal-list-item {
     margin: auto;
-    width: 350px;;
+    width: 100%;
     margin-bottom: 22px;
     list-style-type: none;
-    /* border: 1px solid black; */
     border-radius: 5px;
     position: relative;
     background-color: #4F5D75;
@@ -58,4 +57,10 @@
     position: absolute;
     top: 15px;
     left: 8px;
+}
+
+@media (min-width: 350px) {
+    .journal-list-item {
+        width: 350px;
+    }
 }

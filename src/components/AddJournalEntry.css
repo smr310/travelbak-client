@@ -5,9 +5,10 @@
 
 
 .journal-entry-input {
-    width:500px;
+    width: 80%;
     height: 300px;
     margin-bottom: 20px;
+    border: 1px solid #BFC0C0;
 }
 
 .add-journal-label {
@@ -19,7 +20,7 @@
 }
 
 .add-journal-entry-fieldset {
-    width: 600px;
+    width: 100%;
     margin: auto;
     text-align: left;
     padding-left: 20px;
@@ -27,7 +28,7 @@
 
 .add-entry-header {
     height: 50px;
-    width: 600px;
+    width: 100%;
     border: 1px solid #BFC0C0;
     border-bottom: 0;
     margin: auto;
@@ -35,3 +36,17 @@
     padding-top: 10px; 
 }
 
+
+@media (min-width: 600px) {
+    .journal-entry-input {
+        width: 500px;
+    }
+
+    .add-journal-entry-fieldset  {
+        width: 600px;
+    }
+    
+    .add-entry-header {
+        width: 600px;
+    }
+}

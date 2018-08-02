@@ -1,6 +1,5 @@
 
 .journal-entry {
-    /* border: 1px solid black; */
     width: 80%;
     margin: auto;
     background-color: darkgray;
@@ -10,7 +9,7 @@
 .trip-name {
     margin-bottom: 15px;
     height: 57px; 
-    padding-top: 12px;
+    padding-top: 16px;
     background-color: #BFC0C0;
     border: 1px solid #BFC0C0;
 }
@@ -20,7 +19,8 @@
     display: inline-block;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 420px;
+    width: 200px;
+    padding-left: 20px;
 }
 
 .selected-trip.trip-location {
@@ -52,7 +52,6 @@
 
 .main-div.trip-container {
     border: 1px solid #BFC0C0;
-    width: 700px;
     height:auto;
     padding-bottom: 0px;
 }
@@ -71,4 +70,20 @@
     top: 13px;
     width: 60px;
     height: 30px;
+}
+
+@media (min-width: 400px) {
+    .trip-name {
+        padding-top: 12px;
+    }
+
+    .title-prevent-overlap {
+        width: 420px;
+    }
+}
+
+@media (min-width: 600px) {
+    .trip-name, .main-div.trip-container {
+        width: 600px;
+    }
 }

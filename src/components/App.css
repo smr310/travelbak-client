@@ -3,7 +3,7 @@ box-sizing: border-box;
 }
 
 h3 {
-    font-size: 26px;
+    font-size: 18px;
     font-family: 'Merriweather', serif;
     margin: 0px;
     color: black;
@@ -16,3 +16,10 @@ label {
 fieldset {
     border: 1px solid #BFC0C0;
 }
+
+@media (min-width: 400px) {
+    h3 {
+        font-size: 26px;
+    }
+}
+

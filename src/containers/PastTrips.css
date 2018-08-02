@@ -1,7 +1,6 @@
 
 .container {
     border: 1px solid #BFC0C0;
-    width: 800px;
     margin: auto;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -17,8 +16,7 @@
 
 .list-item-trip {
     font-family: 'Nunito', sans-serif;
-    width: 400px;
-    /* border: 1px solid black; */
+    width: 100%;
     border-radius: 5px;
     padding: 0px;
     list-style-type: none;
@@ -72,4 +70,16 @@
     margin-top: 22px;
     margin-bottom: 22px;
     text-decoration: underline;
+}
+
+@media (min-width: 400px) {
+    .list-item-trip {
+        width: 400px;
+    }
+}
+
+@media (min-width: 600px) {
+    .container {
+        width: 600px;
+    }
 }

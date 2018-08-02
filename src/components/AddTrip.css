@@ -9,7 +9,8 @@
 
 .add-trip-fieldset {
     text-align: left;
-    width: 400px;
+    width: 100%;
+    /*  before width was --> width: 400px; */
     margin: auto;
     /* border: 1px solid black; */
     padding: 10px;
@@ -17,7 +18,7 @@
 
 .add-trip-header {
     height: 50px;
-    width: 400px;
+    width: 100%;
     border: 1px solid #BFC0C0;
     border-bottom: 0;
     margin: auto;
@@ -35,7 +36,7 @@ label {
 
 input {
     margin-top: 10px;
-    border: 1px solid grey;
+    border: 1px solid #BFC0C0;
     height: 23px;
 }
 
@@ -47,4 +48,14 @@ input {
 .datepicker {
     width: 66px;
     margin-top: -10px;
+}
+
+@media (min-width: 400px) {
+    .add-trip-header {
+        width: 400px;
+    }
+    
+    .add-trip-fieldset {
+        width: 400px;
+    }
 }
