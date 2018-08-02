@@ -1,8 +1,6 @@
 import { API_BASE_URL } from '../config'
 
-//hardwired userId for now
-let userId = '5b587f01e059e108592a5f25';
-
+let userId = localStorage.getItem('userId');
 
 export const addTrip = (trip) => dispatch => {
 
@@ -18,14 +16,14 @@ export const addTrip = (trip) => dispatch => {
         body: JSON.stringify({
             "title": trip.tripName,
             "location": trip.location,
-            "startDate": "june",
+            "startDate": trip.startDate,
             "endDate": "july"
         })
     })
-        .then(res => {res.json()
+        .then(res => res.json())
         .then(trip => {
             dispatch(selectTrip(trip)) 
-        })})
+        })
         .catch(error => console.log(error))
 
 }
@@ -39,8 +37,9 @@ export const addJournalEntry = (tripId, journalEntry) => dispatch => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+            "title": journalEntry.title,
             "content": journalEntry.content,
-            "date": "june1",
+            "date": journalEntry.date,
             "tripId": tripId
         })
     })
@@ -48,6 +47,7 @@ export const addJournalEntry = (tripId, journalEntry) => dispatch => {
         .then(trip => {
             dispatch(selectTrip(trip)) 
         })
+        .catch(error => console.log(error))
 }
 
 export const editTrip = (trip) => dispatch => {
@@ -62,14 +62,14 @@ export const editTrip = (trip) => dispatch => {
             "tripId": trip.tripId,
             "title": trip.tripName,
             "location": trip.location,
-            "startDate": "june",
-            "endDate": "july"
+            "startDate": trip.startDate
         })
     })
         .then(res => res.json())
         .then(trip => {
             dispatch(selectTrip(trip))
         })
+        .catch(error => console.log(error))
 }
 
 export const editJournalEntry = (journalEntry) => dispatch => {
@@ -150,7 +150,6 @@ export const deleteJournalEntry = (journalEntryId, selectedTrip) => dispatch => 
     })
     .catch(error => console.log(error))
 }
-
 
 
 

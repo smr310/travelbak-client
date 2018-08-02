@@ -26,13 +26,18 @@ class PastTrips extends Component {
             <li 
                 key={trip._id}
                 className="list-item-trip">
-                <p
+                
+                <span className="delete-button" onClick={() => this.props.dispatch(deleteTrip(trip._id))}>X</span>
+                <div
+                    className="trip-list-item-div"
                     onClick={() => {
                         this.props.dispatch(selectTrip(trip))
                         this.props.history.push('/Trip')
                     }}>
-                    {trip.title}</p>
-                <button onClick={() => this.props.dispatch(deleteTrip(trip._id))}>DELETE</button>
+                    <p
+                        className="trip-title">
+                        {trip.title}</p>
+                </div>
             </li>            
             )
         })
@@ -41,7 +46,10 @@ class PastTrips extends Component {
     render() {
         return (
             <div className="container">
-                <h3>PastTrips Component</h3>
+                <div className="my-trips-header-div">
+                    <h3>My Trips</h3>
+                </div>
+                <button className="add-new-button" onClick={() => this.props.history.push('/AddTrip')}> + New Trip</button>
                 <ul className="main-div">
                     {this.renderList()}
                 </ul>

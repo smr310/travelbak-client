@@ -5,13 +5,33 @@
 
 
 .journal-entry-input {
-    width: 100%;
-    height: 500px;
-    background-color: grey;
+    width:500px;
+    height: 300px;
+    margin-bottom: 20px;
 }
 
-fieldset {
-    width: 80%;
+.add-journal-label {
+   
+}
+
+.date-label {
+    margin-bottom: 10px;
+}
+
+.add-journal-entry-fieldset {
+    width: 600px;
     margin: auto;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.add-entry-header {
+    height: 50px;
+    width: 600px;
+    border: 1px solid #BFC0C0;
+    border-bottom: 0;
+    margin: auto;
+    background-color: #BFC0C0;
+    padding-top: 10px; 
 }
 

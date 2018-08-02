@@ -1,7 +1,10 @@
 import React from 'react';
 import './AddJournalEntry.css';
 import { connect } from 'react-redux'
-import { editJournalEntry, selectTrip } from '../actions/tripActions'
+import { editJournalEntry, selectTrip } from '../actions/tripActions';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import moment from 'moment';
 
 class EditJournalEntry extends React.Component {
 
@@ -9,8 +12,9 @@ class EditJournalEntry extends React.Component {
         super(props)
 
         this.state = {
-            content: '',
-            date: ''
+            title: this.props.journalEntry.title,
+            content: this.props.journalEntry.content,
+            date: moment(this.props.journalEntry.date)
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -22,7 +26,6 @@ class EditJournalEntry extends React.Component {
         this.setState({
             [name]: event.target.value
         })
-
     }
 
     handleSubmit(event) {
@@ -32,11 +35,13 @@ class EditJournalEntry extends React.Component {
         console.log('$$this.state: ', this.state)
 
         let journalEntryId = this.props.journalEntry._id;
-        let tripId = this.props.trip._id
-        let content = this.state.content
-        let date = 'JANUARY 1'
+        let tripId = this.props.trip._id;
+        let title = this.state.title;
+        let content = this.state.content;
+        let date = this.state.date;
 
         let journalEntry = {
+            title,
             tripId,
             journalEntryId,
             content,
@@ -53,12 +58,25 @@ class EditJournalEntry extends React.Component {
     render() {
         return (
             <div className="main-div">
+                <div className="add-entry-header">
+                    <h3>Journal Entry</h3>
+                </div>
                 <form>
-                    <fieldset>
-                        <h4>Date</h4>
-                        <input name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
+                    <fieldset className="add-journal-entry-fieldset">
+                        <label className="add-journal-label date-label" htmlFor="inputDate">Date</label>
+                        <DatePicker
+                            selected={this.state.date}
+                            onChange={(event) => this.setState({
+                                date: event
+                            })}
+                        />
+                        <label className="add-journal-label" htmlFor="entryTitle">Title</label>
+                        <input name="title" type="text" className="journal-entry-title-input" placeholder="" required value={this.state.title} onChange={this.handleChange} />
+                        <label className="add-journal-label">Content</label>
+                        <textarea name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
                         <br />
-                        <button type="submit" className="create-account-btn" onClick={this.handleSubmit}>Save Journal Entry </button>
+                        <button onClick={()=> this.props.history.push('/trip')} className="add-new-button">&lt; BACK</button>
+                        <button type="submit" className="add-new-button" onClick={this.handleSubmit}>SAVE</button>
                     </fieldset>
                 </form>
             </div>

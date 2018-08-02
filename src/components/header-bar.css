@@ -1,0 +1,48 @@
+.header-bar {
+    background-color: #2D3142;
+    margin: 0px; 
+    height: 55px;
+    font-size:14px;
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+    display: inline;
+}
+
+.logout-button, .my-trips-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    background-color: #4F5D75;
+    width: 100px;
+    height: 100%;
+    color: white;
+    border: none;
+}
+
+.my-trips-button {
+    border-right: 1px solid #2D3142;
+}
+
+.logout-button:hover, .my-trips-button:hover {
+    background-color: #BFC0C0;
+    cursor: pointer;
+    color: #2D3142;
+}
+
+.buttons-div {
+    height: 100%;
+    float: right;
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 11px;
+    margin-left: 13px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+

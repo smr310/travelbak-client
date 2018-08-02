@@ -1,25 +1,55 @@
+
 .container {
-    border: 1px solid black;
-    width: 500px;
+    border: 1px solid #BFC0C0;
+    width: 800px;
     margin: auto;
     margin-bottom: 50px;
     margin-top: 50px;
     padding: 0px;
+    background-color: white;
 }
 
 .main-div {
     text-align: center;
     margin-top: 60px;
     margin: auto;
-  
 }
 
 .list-item-trip {
+    font-family: 'Nunito', sans-serif;
     width: 400px;
-    border: 1px solid black;
-    padding: 10px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    padding: 0px;
     list-style-type: none;
     margin: auto;
+    margin-bottom: 35px;
+    background-color: #4F5D75;
+    color: white;
+    position: relative;
+}
+
+.delete-button {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    color: #EF8354;
+}
+
+.trip-title {
+    display: inline-block;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 280px;
 }
 
 .trip {
@@ -30,4 +60,16 @@
     height: 50px;
     margin-left:auto;
     margin-right:auto;
+}
+
+.trip-list-item-div:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 1px grey;
+    border-radius: 5px;
+}
+
+.my-trips-header-div {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    text-decoration: underline;
 }

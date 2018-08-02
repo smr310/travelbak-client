@@ -1,20 +1,74 @@
 
-.main-div {
-    margin-top: 30px;
-}
-
-.trip-name {
-    display: inline;
-}
-
-.new-entry-button {
-    display: inline;
-}
-
 .journal-entry {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
     margin: auto;
     background-color: darkgray;
     margin-top: 10px;
+}
+
+.trip-name {
+    margin-bottom: 15px;
+    height: 57px; 
+    padding-top: 12px;
+    background-color: #BFC0C0;
+    border: 1px solid #BFC0C0;
+}
+
+.title-prevent-overlap {
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 420px;
+}
+
+.selected-trip.trip-location {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.selected-trip.trip-date {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.journal-entries-header {
+    margin-top: 60px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.edit-trip-btn {
+    width: 107px;
+    height: 30px;
+    background-color: #EF8354;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.main-div.trip-container {
+    border: 1px solid #BFC0C0;
+    width: 700px;
+    height:auto;
+    padding-bottom: 0px;
+}
+
+.new-entry-button {
+    margin-bottom: 22px;
+}
+
+.trip-details {
+    position: relative;
+}
+
+.trip-detail-back-button {
+    position: absolute;
+    left: 6px;
+    top: 13px;
+    width: 60px;
+    height: 30px;
 }

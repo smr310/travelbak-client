@@ -8,6 +8,12 @@ export const saveAuthToken = authToken => {
     } catch (e) { }
 };
 
+export const saveUserId = userId => {
+    try {
+        localStorage.setItem('userId', userId);
+    } catch (e) { }
+}
+
 export const clearAuthToken = () => {
     try {
         localStorage.removeItem('authToken');

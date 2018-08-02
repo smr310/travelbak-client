@@ -2,6 +2,10 @@ import React from 'react';
 import './AddJournalEntry.css';
 import { connect } from 'react-redux'
 import { addJournalEntry } from '../actions/tripActions'
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css'
+import moment from 'moment'
+
 
 class AddJournalEntry extends React.Component {
 
@@ -9,8 +13,9 @@ class AddJournalEntry extends React.Component {
         super(props)
 
         this.state = {
+            title: '',
             content: '',
-            date: ''
+            date: moment()
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -42,12 +47,25 @@ class AddJournalEntry extends React.Component {
     render() {
         return(
             <div className="main-div">
-                <form>
-                    <fieldset>
-                        <h4>Date</h4>
-                        <input name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
+                <div className="add-entry-header">
+                    <h3>Add Journal Entry</h3>
+                </div>
+                <form className="add-entry-form">
+                    <fieldset className="add-journal-entry-fieldset">
+                        <label className="add-journal-label date-label" htmlFor="inputDate">Date</label>
+                        <DatePicker className="datepicker"
+                            selected={this.state.date}
+                            onChange={(event) => this.setState({
+                                date: event
+                            })}
+                        />
+                        <label className="add-journal-label" htmlFor="entryTitle">Title</label>
+                        <input name="title" type="text" className="journal-entry-title-input" placeholder="" required value={this.state.title} onChange={this.handleChange} />
+                        <label className="add-journal-label">Content</label>
+                        <textarea name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
                         <br />
-                        <button type="submit" className="create-account-btn" onClick={this.handleSubmit}>Save Journal Entry </button>
+                        <button onClick={() => this.props.history.push('/trip')} className="add-new-button">&lt; Back</button>
+                        <button type="submit" className="add-new-button" onClick={this.handleSubmit}>Save</button>
                     </fieldset>
                 </form>
             </div>

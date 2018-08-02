@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './NavBar';
 // import LandingPage from './components/LandingPage';
 import LandingPage from './landing-page';
 import Login from './Login';
@@ -50,9 +49,6 @@ class App extends Component {
   render() {
     return (
         <div className="app">
-          <nav>
-            <NavBar />
-          </nav>
           <HeaderBar loggedIn = {this.props.loggedIn} history= {this.props.history} />
           <main>
             <Route exact path="/" component={LandingPage} />

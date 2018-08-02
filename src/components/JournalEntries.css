@@ -4,11 +4,58 @@
 }
 
 .journal-list-item {
-    margin-bottom: 30px;
+    margin: auto;
+    width: 350px;;
+    margin-bottom: 22px;
     list-style-type: none;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    position: relative;
+    background-color: #4F5D75;
+    color: white;
+}
+
+.journal-list-item:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 1px grey;
+    border-radius: 5px;
 }
 
 .main-div {
     text-align: center;
     margin-top: 140px;
+}
+
+.entry-edit-btn, {
+    width: 45px;
+    height: 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+.entry-details-div {
+    text-align: left;
+    height: 50px;
+    padding-left: 12px;
+    padding-top: 9px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.entry-title-span {
+    margin-left: 110px;
+    margin-top: 5px;
+    width: 140px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
+
+.entry-date-div {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 8px;
 }

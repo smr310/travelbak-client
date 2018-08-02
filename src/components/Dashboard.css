@@ -1,4 +1,22 @@
+
 .main-div {
     text-align: center;
     margin-top: 60px;
 }
+
+.add-new-button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    background-color: #EF8354;
+    width: 120px;
+    height: 45px;
+    color: white;
+    border-radius: 5px;
+    transition: box-shadow .1s;
+}
+
+.add-new-button:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 1px grey;
+}
+

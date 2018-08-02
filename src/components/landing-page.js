@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
+import './landing-page.css'
 
 import LoginForm from './login-form';
 
@@ -11,10 +12,11 @@ export function LandingPage(props) {
     }
 
     return (
-        <div className="home">
-            <h2>Welcome to travelBak</h2>
-            <LoginForm />
-            <Link to="/register">Register</Link>
+        <div class="bgimg">
+            <div className="home">
+                <h2>Welcome to travelBak</h2>
+                <LoginForm />
+            </div>
         </div>
     );
 }

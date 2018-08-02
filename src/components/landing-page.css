@@ -1,0 +1,14 @@
+
+.bgimg {
+    height: 1228px;
+    background-image: url('../mountains.jpg');
+}
+
+.home {
+    text-align: center;
+}
+
+h2 {
+    margin: 0px;
+    padding-top: 30px;
+}
