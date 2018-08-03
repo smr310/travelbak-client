@@ -2,18 +2,13 @@
 
 
 
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
-
 .login-form.form {
   margin-top: 30px;
+  padding-top: 16px;
 }
 
 .form {
-  /* margin-top: 30px; */
+  padding-top: 0px;
   position: relative;
   z-index: 1;
   background: #FFFFFF;
@@ -33,6 +28,8 @@
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  display: block;
+  margin-top: -16px;
 }
 .form button {
   font-family: "Roboto", sans-serif;

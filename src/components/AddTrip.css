@@ -10,9 +10,7 @@
 .add-trip-fieldset {
     text-align: left;
     width: 100%;
-    /*  before width was --> width: 400px; */
     margin: auto;
-    /* border: 1px solid black; */
     padding: 10px;
 }
 
@@ -48,6 +46,19 @@ input {
 .datepicker {
     width: 66px;
     margin-top: -10px;
+}
+
+.end-date-label {
+    margin-left: 17px;
+}
+
+.start-date-div {
+    display: inline-block;
+}
+
+.end-date-div {
+    display: inline-block;
+    margin-left: 25px;
 }
 
 @media (min-width: 400px) {

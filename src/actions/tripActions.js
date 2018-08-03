@@ -17,7 +17,7 @@ export const addTrip = (trip) => dispatch => {
             "title": trip.tripName,
             "location": trip.location,
             "startDate": trip.startDate,
-            "endDate": "july"
+            "endDate": trip.endDate
         })
     })
         .then(res => res.json())

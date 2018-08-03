@@ -50,7 +50,7 @@ class AddJournalEntry extends React.Component {
                 <div className="add-entry-header">
                     <h3>Add Journal Entry</h3>
                 </div>
-                <form className="add-entry-form">
+                <form onSubmit={this.handleSubmit} className="add-entry-form">
                     <fieldset className="add-journal-entry-fieldset">
                         <label className="add-journal-label date-label" htmlFor="inputDate">Date</label>
                         <DatePicker className="datepicker"
@@ -65,7 +65,7 @@ class AddJournalEntry extends React.Component {
                         <textarea name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
                         <br />
                         <button onClick={() => this.props.history.push('/trip')} className="add-new-button">&lt; Back</button>
-                        <button type="submit" className="add-new-button" onClick={this.handleSubmit}>Save</button>
+                        <button type="submit" className="add-new-button">Save</button>
                     </fieldset>
                 </form>
             </div>

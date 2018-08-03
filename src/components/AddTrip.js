@@ -14,7 +14,8 @@ class AddTrip extends React.Component {
         this.state = {
             tripName: '',
             location: '',
-            startDate: moment()
+            startDate: moment(),
+            endDate: moment()
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -40,7 +41,8 @@ class AddTrip extends React.Component {
         let trip = {
             tripName: this.state.tripName,
             location: this.state.location,
-            startDate: this.state.startDate
+            startDate: this.state.startDate,
+            endDate: this.state.endDate
         }
 
         this.props.dispatch(addTrip(trip))        
@@ -53,22 +55,32 @@ class AddTrip extends React.Component {
                 <div className="add-trip-header">
                     <h3>Add Trip</h3>
                 </div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <fieldset className="add-trip-fieldset">
                         <label htmlFor="inputTripName">Trip Name</label>
                         <input name="tripName" type="text" placeholder="" required value={this.state.tripName} onChange={this.handleChange} /><br />
                         <label htmlFor="inputLocation">Location(s)</label>
                         <input name="location" type="text" placeholder="" required value={this.state.location} onChange={this.handleChange}/><br />
-                        <label htmlFor="inputDates">Start Date</label><br />
-                        <DatePicker className="datepicker"
-                            selected={this.state.startDate}
-                            onChange={(event) => this.setState({
-                                startDate: event
-                            })}
-                        />
+                        <label htmlFor="inputDates"><span>Start Date</span><span className="end-date-label">End Date</span></label><br />
+                        <div className="start-date-div">
+                            <DatePicker className="datepicker"
+                                selected={this.state.startDate}
+                                onChange={(event) => this.setState({
+                                    startDate: event
+                                })}
+                            />
+                        </div>
+                        <div className="end-date-div">
+                            <DatePicker className="datepicker"
+                                selected={this.state.endDate}
+                                onChange={(event) => this.setState({
+                                    endDate: event
+                                })}
+                            />
+                        </div>
                         <div className="trip-btn-container">
                             <button onClick={() => this.props.history.push('/dashboard')} className="add-new-button">&lt; Back</button>
-                            <button className="add-new-button" onClick={this.handleSubmit}type="submit">Save Trip</button>
+                            <button className="add-new-button" type="submit">Save Trip</button>
                         </div>
                     </fieldset>
                 </form>

@@ -12,7 +12,7 @@ export function LandingPage(props) {
     }
 
     return (
-        <div class="bgimg">
+        <div className="bgimg">
             <div className="home">
                 <h2>Welcome to travelBak</h2>
                 <LoginForm />

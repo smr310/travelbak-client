@@ -20,7 +20,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <form
-                className="login-form form"
+                className="login-form form registration-form"
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
@@ -54,7 +54,7 @@ export class RegistrationForm extends React.Component {
                     disabled={this.props.pristine || this.props.submitting}>
                     Register
                 </button>
-                <p class="message">Already registered? <a href="/">Sign in</a></p>
+                <p className="message">Already registered? <a href="/">Sign in</a></p>
             </form>
         );
     }
