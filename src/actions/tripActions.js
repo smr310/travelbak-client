@@ -1,11 +1,10 @@
 import { API_BASE_URL } from '../config'
 
-let userId = localStorage.getItem('userId');
+let userId;
 
 export const addTrip = (trip) => dispatch => {
 
-    console.log('inside--trip:', trip)
-
+    userId = localStorage.getItem('userId')
 
     fetch(`${API_BASE_URL}/trip/${userId}`, {
         method: 'POST',
@@ -29,7 +28,8 @@ export const addTrip = (trip) => dispatch => {
 }
 
 export const addJournalEntry = (tripId, journalEntry) => dispatch => {
-   
+    userId = localStorage.getItem('userId')
+
     fetch(`${API_BASE_URL}/journal/${userId}`, {
         method: 'POST',
         headers: {
@@ -51,7 +51,7 @@ export const addJournalEntry = (tripId, journalEntry) => dispatch => {
 }
 
 export const editTrip = (trip) => dispatch => {
-
+    userId = localStorage.getItem('userId')
     fetch(`${API_BASE_URL}/trip/${userId}`, {
         method: 'PUT',
         headers: {
@@ -73,7 +73,7 @@ export const editTrip = (trip) => dispatch => {
 }
 
 export const editJournalEntry = (journalEntry) => dispatch => {
-
+    userId = localStorage.getItem('userId')
     fetch(`${API_BASE_URL}/journal/${userId}`, {
         method: 'PUT',
         headers: {
@@ -92,6 +92,7 @@ export const editJournalEntry = (journalEntry) => dispatch => {
 
 
 export const fetchTrips = () => dispatch => {
+    userId = localStorage.getItem('userId')
     fetch(`${API_BASE_URL}/trip/${userId}`, {
         method: 'GET',
         headers: {
@@ -112,7 +113,7 @@ export const fetchTrips = () => dispatch => {
 
 
 export const deleteTrip = (tripId) => dispatch => {
-
+    userId = localStorage.getItem('userId')
     fetch(`${API_BASE_URL}/trip/${userId}`, {
         method: 'DELETE',
         headers: {
@@ -132,7 +133,7 @@ export const deleteTrip = (tripId) => dispatch => {
 
 
 export const deleteJournalEntry = (journalEntryId, selectedTrip) => dispatch => {
-
+    userId = localStorage.getItem('userId')
     fetch(`${API_BASE_URL}/journal/${userId}`, {
         method: 'DELETE',
         headers: {
