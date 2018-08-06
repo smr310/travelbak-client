@@ -40,9 +40,10 @@ export const authError = error => ({
 const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);
     dispatch(setAuthToken(authToken));
-    dispatch(authSuccess(decodedToken.user));
+  
     saveAuthToken(authToken);
     saveUserId(decodedToken.user.id)
+    dispatch(authSuccess(decodedToken.user));
 };
 
 export const login = (username, password) => dispatch => {
@@ -63,7 +64,7 @@ export const login = (username, password) => dispatch => {
             .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
             .then(({ authToken }) => storeAuthInfo(authToken, dispatch))
-            
+
             .catch(err => {
                 const { code } = err;
                 const message =
