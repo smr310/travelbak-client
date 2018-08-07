@@ -14,7 +14,8 @@ export function LandingPage(props) {
     return (
         <div className="bgimg">
             <div className="home">
-                <h2>Welcome to travelBak</h2>
+                <h2 className="welcome-text">Welcome to travelBak</h2>
+                <p className="sub-welcome-text">A journal for your travel adventures</p>
                 <LoginForm />
             </div>
         </div>

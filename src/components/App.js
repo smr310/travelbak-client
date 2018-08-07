@@ -47,6 +47,19 @@ class App extends Component {
   }
   
   render() {
+
+    if(!this.props.loggedIn) {
+      return (
+         <div className="app">
+          <HeaderBar loggedIn = {this.props.loggedIn} history= {this.props.history} />
+          <main>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/register" component={RegistrationPage} />
+          </main>
+        </div>
+      )
+    }
+
     return (
         <div className="app">
           <HeaderBar loggedIn = {this.props.loggedIn} history= {this.props.history} />

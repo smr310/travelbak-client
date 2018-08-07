@@ -9,6 +9,20 @@
 }
 
 h2 {
+    font-family: 'Merriweather', serif;
     margin: 0px;
-    padding-top: 30px;
+    padding-top: 38px;
+
+}
+
+.welcome-text {
+    font-size: 32px;
+
+}
+
+.sub-welcome-text {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }

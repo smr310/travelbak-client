@@ -47,6 +47,11 @@ export class LoginForm extends React.Component {
                     validate={[required, nonEmpty]}
                     placeholder="password"
                 />
+                <div className="demo-credentials">
+                    <span className="demo-credentials-title">Demo Credentials</span>
+                    <p className="demo-credentials-user">Username:<span className="user-text">guest</span></p>
+                    <p className="demo-credentials-pw">Password:<span className="pw-text">travel</span></p>
+                </div>
                 <button disabled={this.props.pristine || this.props.submitting}>
                     Log in
                 </button>

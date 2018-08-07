@@ -13,7 +13,8 @@ class EditTrip extends Component {
         this.state = {
             tripName: this.props.trip.title,
             location: this.props.trip.location,
-            startDate: moment(this.props.trip.startDate)
+            startDate: moment(this.props.trip.startDate),
+            endDate: moment(this.props.trip.endDate)
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -38,7 +39,8 @@ class EditTrip extends Component {
             tripId: this.props.trip._id,
             tripName: this.state.tripName,
             location: this.state.location,
-            startDate: this.state.startDate
+            startDate: this.state.startDate,
+            endDate: this.state.endDate
         }
 
         this.props.dispatch(editTrip(trip))
@@ -59,12 +61,22 @@ class EditTrip extends Component {
                         <label htmlFor="inputLocation">Location(s)</label>
                         <input name="location" type="text" placeholder="" required value={this.state.location} onChange={this.handleChange} /><br />
                         <label className="trip-date-input-label" htmlFor="inputDates">Dates</label><br />
-                        <DatePicker
-                            selected={this.state.startDate}
-                            onChange={(event) => this.setState({
-                                startDate: event
-                            })}
-                        />
+                        <div className="start-date-div">
+                            <DatePicker className="datepicker"
+                                selected={this.state.startDate}
+                                onChange={(event) => this.setState({
+                                    startDate: event
+                                })}
+                            />
+                        </div>
+                        <div className="end-date-div">
+                            <DatePicker className="datepicker"
+                                selected={this.state.endDate}
+                                onChange={(event) => this.setState({
+                                    endDate: event
+                                })}
+                            />
+                        </div>
                         <div className="trip-btn-container">
                             <button onClick={() => this.props.history.push('/dashboard')} className="add-new-button">&lt; Back</button>
                             <button className="add-new-button" onClick={this.handleSubmit} type="submit">Save Trip</button>

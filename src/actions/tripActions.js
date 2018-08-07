@@ -11,6 +11,7 @@ export const addTrip = (trip) => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({
             "title": trip.tripName,
@@ -35,6 +36,7 @@ export const addJournalEntry = (tripId, journalEntry) => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({
             "title": journalEntry.title,
@@ -57,12 +59,14 @@ export const editTrip = (trip) => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({
             "tripId": trip.tripId,
             "title": trip.tripName,
             "location": trip.location,
-            "startDate": trip.startDate
+            "startDate": trip.startDate,
+            "endDate": trip.endDate
         })
     })
         .then(res => res.json())
@@ -79,6 +83,7 @@ export const editJournalEntry = (journalEntry) => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({journalEntry})
     })
@@ -98,17 +103,20 @@ export const fetchTrips = () => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         }
     })
     .then(res => {
-        //console.log(res)
+        console.log('res.status', res.status)
         return res.json()
     })
     .then(trips => {
         // console.log(trips)
         dispatch(fetchTripsSuccess(trips))
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+        console.log(error);
+    })
 }
 
 
@@ -119,6 +127,7 @@ export const deleteTrip = (tripId) => dispatch => {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({
             "tripId": tripId
@@ -139,6 +148,7 @@ export const deleteJournalEntry = (journalEntryId, selectedTrip) => dispatch => 
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`
         },
         body: JSON.stringify({
             "journalEntryId": journalEntryId,

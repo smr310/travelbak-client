@@ -61,3 +61,19 @@
   display: none;
 }
 
+.demo-credentials {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+}
+
+.demo-credentials-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-text, .pw-text {
+  margin-left: 5px;
+  color: black;
+}
