@@ -6,7 +6,7 @@ travelBak is a journal for keeping track of your travel adventures.
  
 ## Motivation
 
-I love to travel. I wanted to create an app that can serve as a central repository for your thoughts and memories while travelling. 
+I love to travel. I wanted to create an app that can serve as a central repository for your thoughts and memories while traveling. 
    
 ## Screenshots
 
