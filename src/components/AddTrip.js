@@ -51,12 +51,12 @@ class AddTrip extends React.Component {
     
     render() {
         return(
-            <div className="main-div">
+            <div className="padding-top-one bgimg">
                 <div className="add-trip-header">
                     <h3>Add Trip</h3>
                 </div>
                 <form onSubmit={this.handleSubmit}>
-                    <fieldset className="add-trip-fieldset">
+                    <fieldset className="add-trip-fieldset background-white">
                         <label htmlFor="inputTripName">Trip Name</label>
                         <input name="tripName" type="text" placeholder="" required value={this.state.tripName} onChange={this.handleChange} /><br />
                         <label htmlFor="inputLocation">Location(s)</label>

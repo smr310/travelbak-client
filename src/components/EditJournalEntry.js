@@ -57,12 +57,12 @@ class EditJournalEntry extends React.Component {
 
     render() {
         return (
-            <div className="main-div">
+            <div className="bgimg padding-top-one">
                 <div className="add-entry-header">
                     <h3>Journal Entry</h3>
                 </div>
                 <form>
-                    <fieldset className="add-journal-entry-fieldset">
+                    <fieldset className="add-journal-entry-fieldset background-white">
                         <label className="add-journal-label date-label" htmlFor="inputDate">Date</label>
                         <DatePicker
                             selected={this.state.date}
@@ -75,8 +75,10 @@ class EditJournalEntry extends React.Component {
                         <label className="add-journal-label">Content</label>
                         <textarea name="content" type="text" className="journal-entry-input" placeholder="" required value={this.state.content} onChange={this.handleChange} />
                         <br />
-                        <button onClick={()=> this.props.history.push('/trip')} className="add-new-button">&lt; BACK</button>
-                        <button type="submit" className="add-new-button" onClick={this.handleSubmit}>SAVE</button>
+                        <div className="trip-btn-container">
+                            <button onClick={()=> this.props.history.push('/trip')} className="add-new-button">&lt; BACK</button>
+                            <button type="submit" className="add-new-button" onClick={this.handleSubmit}>SAVE</button>
+                        </div>
                     </fieldset>
                 </form>
             </div>

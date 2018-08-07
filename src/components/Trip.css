@@ -11,7 +11,7 @@
     height: 57px; 
     padding-top: 16px;
     background-color: #BFC0C0;
-    border: 1px solid #BFC0C0;
+    /* border: 1px solid #BFC0C0; */
 }
 
 .title-prevent-overlap {
@@ -50,10 +50,11 @@
     margin-top: 10px;
 }
 
-.main-div.trip-container {
+.trip-container {
     border: 1px solid #BFC0C0;
     height:auto;
     padding-bottom: 0px;
+    background: white;
 }
 
 .new-entry-button {
@@ -83,7 +84,7 @@
 }
 
 @media (min-width: 600px) {
-    .trip-name, .main-div.trip-container {
-        width: 600px;
-    }
+   .trip-container {
+       width: 600px;
+   }
 }

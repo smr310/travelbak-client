@@ -50,12 +50,12 @@ class EditTrip extends Component {
 
     render() {
         return (
-            <div className="main-div">
+            <div className="bgimg padding-top-one">
                 <div className="add-trip-header">
                     <h3>Edit Trip</h3>
                 </div>
                 <form>
-                    <fieldset className="add-trip-fieldset">
+                    <fieldset className="add-trip-fieldset background-white">
                         <label htmlFor="inputTripName">Trip Name</label>
                         <input name="tripName" type="text" placeholder="" required value={this.state.tripName} onChange={this.handleChange} /><br />
                         <label htmlFor="inputLocation">Location(s)</label>
@@ -78,7 +78,7 @@ class EditTrip extends Component {
                             />
                         </div>
                         <div className="trip-btn-container">
-                            <button onClick={() => this.props.history.push('/dashboard')} className="add-new-button">&lt; Back</button>
+                            <button onClick={() => this.props.history.push('/trip')} className="add-new-button">&lt; Back</button>
                             <button className="add-new-button" onClick={this.handleSubmit} type="submit">Save Trip</button>
                         </div>
                     </fieldset>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Dashboard.css';
-import PastTrips from '../containers/PastTrips';
-import Trip from '../containers/Trip'
+import PastTrips from './PastTrips';
+import Trip from './Trip'
 
 export default function Dashboard(props) {
     return (
-        <div className="main-div">
+        <div className="padding-top-one text-center bgimg">
       
             <PastTrips history={props.history}/>
         </div>

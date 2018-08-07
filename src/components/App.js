@@ -5,7 +5,7 @@ import LandingPage from './landing-page';
 import Login from './Login';
 import Dashboard from './Dashboard';
 import AddTrip from './AddTrip';
-import Trip from '../containers/Trip';
+import Trip from './Trip';
 import AddJournalEntry from './AddJournalEntry';
 import EditTrip from './EditTrip';
 import { connect } from 'react-redux';

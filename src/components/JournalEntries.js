@@ -33,7 +33,7 @@ class JournalEntries extends React.Component {
                             this.props.dispatch(journalEntrySelected(journalEntry))
                             this.props.history.push('/editJournalEntry');
                         }}>
-                        <div class="entry-details-div">
+                        <div className="entry-details-div">
                             <div className="entry-date-div">{moment(journalEntry.date).format('ll')}</div>
                             <span className="entry-title-span">{journalEntry.title}</span>
                         </div>  
