@@ -8,7 +8,7 @@ import { isMoment } from '../../node_modules/moment';
 import moment from 'moment';
 
 
-class AddTrip extends React.Component {
+export class AddTrip extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -52,7 +52,7 @@ class AddTrip extends React.Component {
     render() {
         return(
             <div className="padding-top-one bgimg">
-                <div className="add-trip-header">
+                <div className="add-trip-header text-center">
                     <h3>Add Trip</h3>
                 </div>
                 <form onSubmit={this.handleSubmit}>
