@@ -51,7 +51,7 @@ class EditTrip extends Component {
     render() {
         return (
             <div className="bgimg padding-top-one">
-                <div className="add-trip-header">
+                <div className="add-trip-header text-center">
                     <h3>Edit Trip</h3>
                 </div>
                 <form>

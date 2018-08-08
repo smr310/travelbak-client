@@ -47,7 +47,7 @@ class AddJournalEntry extends React.Component {
     render() {
         return(
             <div className="bgimg padding-top-one">
-                <div className="add-entry-header">
+                <div className="add-entry-header text-center">
                     <h3>Add Journal Entry</h3>
                 </div>
                 <form onSubmit={this.handleSubmit} className="add-entry-form">
