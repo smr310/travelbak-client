@@ -59,8 +59,6 @@ class PastTrips extends Component {
 }
 
 function mapStateToProps(state) {
-  
-
     return {
         trips: state.tripsReducer.trips,
     };
