@@ -14,6 +14,4 @@ describe('<AddTrip />', () => {
         // expect(wrapper.contains().toEqual(true);
     });
 
-
-
 });
