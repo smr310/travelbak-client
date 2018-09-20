@@ -2,6 +2,8 @@
 
 Live link: https://fathomless-brook-48599.herokuapp.com/
 
+Link to travelBak backend GitHub repo: https://github.com/smr310/travelbak-api
+
 travelBak is a journal for keeping track of your travel adventures. 
  
 ## Motivation
